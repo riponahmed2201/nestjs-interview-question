@@ -87,3 +87,141 @@ Middlewares are functions that are executed by NestJS before a request reaches t
 ## 20. What databases work best with NestJS?
 
 - Any database that works with Node.js will work with NestJS. However, some databases are better suited for NestJS than others. For example, MongoDB is a popular choice for NestJS because it is a NoSQL database that is easy to use and scale.
+
+## 21. Explain Dependency Injection in NestJS.
+
+- Dependency Injection (DI) is a design pattern in which a class receives its dependencies from external sources rather than creating them itself. In NestJS, DI is used to manage the creation and flow of instances of classes, making it easy to manage and test different components of an application.
+
+- Dependency Injection in NestJS allows us to inject dependencies into classes, promoting code reusability and testability. By declaring dependencies in the constructor, NestJS takes care of creating and managing instances, making our code cleaner and more modular.
+
+## 22. How does Middleware work in NestJS?
+
+- Middleware in NestJS is a function that has access to the request and response objects. It can modify the request or response, terminate the request-response cycle, or pass control to the next middleware in the stack.
+
+- Middleware in NestJS intercepts incoming requests, allowing us to perform actions before reaching the route handler. For instance, we can create middleware for authentication checks or logging. It provides a modular way to handle various concerns in the application.
+
+## 23. Describe the role of Guards in NestJS.
+
+- Guards in NestJS are responsible for guarding routes and preventing unauthorized access. They can be used for authentication, authorization, and input validation.
+
+- Guards act as gatekeepers for routes, ensuring that only authorized users can access certain resources. Whether it's checking user roles, validating tokens, or other authentication mechanisms, guards provide a robust security layer for NestJS applications.
+
+## 24. Explain the purpose of Interceptors in NestJS.
+
+- Interceptors in NestJS are used to intercept and transform the data before it reaches the route handler or after the response is generated. They can be applied globally or at the controller or method level.
+
+- Interceptors provide a way to intercept and modify the request or response at various stages of the application lifecycle. Whether it's logging, transforming data, or handling errors, interceptors enhance the flexibility and extensibility of NestJS applications.
+
+## 25. What is the purpose of DTOs (Data Transfer Objects) in NestJS?
+
+- Data Transfer Objects (DTOs) in NestJS are used to define the structure of data that is exchanged between the client and the server. They help in validating and sanitizing incoming data.
+
+- DTOs serve as blueprints for data exchanged between the client and server. By defining the expected structure, they not only aid in validation but also contribute to cleaner and more maintainable code, reducing the risk of errors in data handling.
+
+## 26. How does NestJS handle Dependency Injection across modules?
+
+- In NestJS, Dependency Injection is scoped at the module level. Each module has its own container, and dependencies are registered within that container. This allows for better encapsulation and modularity.
+
+- NestJS employs a module-based architecture, and each module has its own container for managing dependencies. This approach enhances modularity and encapsulation, ensuring that dependencies are scoped appropriately to the module they belong to.
+
+## 27. What is the purpose of Pipes in NestJS and how do they work?
+
+- Pipes in NestJS are used for data transformation and validation. They can process incoming data before it reaches the route handler. Pipes can be synchronous or asynchronous, allowing for various types of data manipulation.
+
+- Pipes are a powerful feature in NestJS that enable us to process and validate incoming data before it reaches the route handler. They contribute to data integrity and can be synchronous or asynchronous, allowing for a wide range of data manipulation tasks.
+
+## 28. Explain the concept of Middleware in NestJS.
+
+- Middleware in NestJS is a series of functions that have access to the request and response objects. It can perform actions before reaching the route handler, such as logging, authentication, or modifying the request or response.
+
+- Middleware acts as a bridge between the incoming request and the route handler. It allows us to perform tasks like authentication checks, logging, or modifying the request or response. Middleware enhances the flexibility and extensibility of NestJS applications.
+
+## 29. How does NestJS support database integration?
+
+- NestJS provides various modules and libraries for seamless integration with databases. It supports multiple database systems, including but not limited to MongoDB, PostgreSQL, MySQL, and SQLite. The TypeORM library is commonly used for database interactions in NestJS applications.
+
+- NestJS offers excellent support for integrating with databases. Whether you're working with MongoDB, PostgreSQL, MySQL, or SQLite, NestJS provides modules and libraries to streamline database interactions. TypeORM, in particular, is a popular choice for ORM-based database operations in NestJS.
+
+## 30. How does NestJS handle Authentication?
+
+- NestJS supports various strategies for handling authentication, including passport.js integration. Passport is a widely-used authentication middleware that allows you to implement different authentication strategies, such as JWT, OAuth, or local authentication.
+
+- NestJS provides robust support for authentication through the integration of passport.js. This allows us to implement various authentication strategies, such as JWT, OAuth, or local authentication. The flexibility provided ensures that developers can choose the most suitable authentication method for their applications.
+
+## 31. What is Swagger and how is it used in NestJS?
+
+- Swagger is a popular tool for designing, building, and documenting APIs. In NestJS, Swagger can be integrated to automatically generate API documentation based on the decorators used in the code, making it easy to maintain and share API documentation.
+
+- Swagger is a valuable tool for API development, and in NestJS, it can be integrated to automatically generate documentation based on the decorators we use in our code. This not only streamlines the documentation process but also ensures that our API documentation remains accurate and up-to-date.
+
+## 32. How does NestJS handle WebSocket communication?
+
+- NestJS supports WebSocket communication through the use of the WebSocket Gateway. This allows real-time bidirectional communication between clients and the server, making it suitable for applications that require instant updates.
+
+- NestJS facilitates WebSocket communication through the WebSocket Gateway. This feature enables real-time bidirectional communication between clients and the server, making it an excellent choice for applications that demand instant updates, like chat applications or collaborative tools.
+
+## 33. How can you handle CORS in NestJS?
+
+- NestJS provides built-in support for Cross-Origin Resource Sharing (CORS). You can configure CORS settings at the application level or on specific routes, allowing you to control which domains are permitted to access your API.
+
+- Handling CORS in NestJS is straightforward as it comes with built-in support. We can configure CORS settings at the application level or on specific routes, giving us fine-grained control over which domains are allowed to access our API. This ensures a secure and controlled approach to cross-origin resource sharing.
+
+## 34. How does NestJS facilitate testing?
+
+- NestJS promotes testability by providing a built-in testing module and support for various testing libraries such as Jest. With dependency injection, mocking, and testing utilities, NestJS makes it easy to write unit tests, integration tests, and end-to-end tests for your application.
+
+- NestJS places a strong emphasis on testability, providing a built-in testing module and seamless integration with Jest. Whether it's unit tests, integration tests, or end-to-end tests, NestJS supports various testing approaches. This enables developers to maintain code reliability and identify issues early in the development process.
+
+## 35. Explain the concept of Guards in NestJS and provide use cases.
+
+- Guards in NestJS are used to protect routes and control access based on certain conditions. They can be applied at the controller or method level and are ideal for scenarios such as authentication, role-based access control, and custom authorization logic.
+
+- Guards play a pivotal role in protecting routes and controlling access in NestJS. They are versatile and can be used for various purposes, including authentication checks, role-based access control, and implementing custom authorization logic. Guards contribute to the overall security and robustness of NestJS applications.
+
+## 36. What is the purpose of ExecutionContext in NestJS?
+
+- ExecutionContext in NestJS represents the context of the currently processed HTTP request. It contains information about the request, response, route handler, and other details. ExecutionContext is often used in custom decorators, guards, and interceptors to access and manipulate request-related information.
+
+- ExecutionContext in NestJS is a powerful tool that encapsulates information about the current HTTP request being processed. It serves as a valuable resource in custom decorators, guards, and interceptors, allowing us to access and manipulate various details related to the request, response, and route handler."
+
+## 37. How does NestJS handle Exception Handling?
+
+- NestJS provides a robust mechanism for handling exceptions through the use of exception filters. Exception filters allow you to catch and handle exceptions globally or at a per-route basis. They can be customized to provide meaningful error responses and log details for debugging purposes.
+
+- Exception handling in NestJS is effectively managed through exception filters. These filters enable us to catch and handle exceptions either globally or at the route level. Their flexibility allows for customization, ensuring that error responses are meaningful and detailed for debugging purposes.
+
+## 38. Can you explain the concept of Providers in NestJS?
+
+- Providers in NestJS are a fundamental concept and play a central role in the dependency injection system. They are responsible for creating and managing instances of classes that can be injected into other components, such as controllers, services, or modules.
+
+- Providers are essential in NestJS as they form the backbone of the dependency injection system. Their primary role is to create and manage instances of classes that can be injected into different components, promoting modularity and testability. By using providers, NestJS ensures a robust and organized approach to handling dependencies.
+
+## 39. How can you secure routes in NestJS?
+
+- NestJS provides multiple mechanisms to secure routes, including the use of guards, middleware, and exception filters. Guards are particularly powerful for implementing authentication and authorization logic, while middleware allows you to intercept requests and apply security measures. Additionally, exception filters can be used to handle and respond to exceptions securely.
+
+- Securing routes in NestJS is a multi-faceted process, and the framework provides several tools for this purpose. Guards are instrumental for implementing authentication and authorization logic, middleware allows us to intercept requests and apply security measures, and exception filters help in handling and responding to exceptions securely. By combining these mechanisms, we can ensure the security and integrity of our routes.
+
+## 40. Explain the role of ExecutionContext in NestJS Interceptors.
+
+- ExecutionContext in NestJS Interceptors represents the context of the currently processed HTTP request, similar to its role in guards and filters. It provides information about the request, response, route handler, and other details. In interceptors, ExecutionContext is commonly used to access and modify request or response data before or after it reaches the route handler.
+
+- ExecutionContext continues to play a crucial role in NestJS Interceptors. It serves as a snapshot of the current HTTP request's context, allowing interceptors to access and modify request or response data. This capability is particularly useful for performing tasks before or after the request reaches the route handler.
+
+## 41. How does NestJS handle Circular Dependencies?
+
+- NestJS provides a mechanism to handle circular dependencies through the use of forward referencing. By using TypeScript's `forwardRef` function, you can resolve dependencies that have circular references. This ensures that the application can still inject the necessary dependencies without encountering runtime errors.
+
+- Circular dependencies can be a challenge in any application, and NestJS addresses this issue by leveraging TypeScript's `forwardRef` function. This allows us to resolve dependencies with circular references, ensuring that the injection system can handle such scenarios without encountering runtime errors. However, it's essential to maintain a clear and organized application structure to minimize the occurrence of circular dependencies.
+
+## 42. How can you handle File Uploads in NestJS?
+
+- NestJS facilitates file uploads through the use of libraries such as `multer` or built-in capabilities like the `@UploadedFile` decorator. `Multer` is a popular middleware for handling file uploads, while the `@UploadedFile` decorator simplifies accessing and processing uploaded files in NestJS controllers.
+
+- NestJS offers convenient ways to handle file uploads, and one common approach is using the `multer` middleware. Additionally, the framework provides the `@UploadedFile` decorator, which simplifies the process of accessing and processing uploaded files in NestJS controllers. These tools collectively offer a flexible and efficient solution for managing file uploads in NestJS applications
+
+## 43. How can you implement Caching in NestJS?
+
+- NestJS supports caching through various mechanisms, including the use of caching libraries like `cache-manager` and built-in decorators such as `@CacheKey` and `@CacheTTL`. By incorporating caching strategies in your application, you can enhance performance and reduce response times for frequently requested data.
+
+- Caching is a powerful feature in NestJS, and it can be implemented using libraries like `cache-manager`. Additionally, NestJS provides built-in decorators such as `@CacheKey` and `@CacheTTL` to simplify the caching process. By strategically incorporating caching strategies in our application, we can significantly enhance performance and reduce response times for frequently requested data.
